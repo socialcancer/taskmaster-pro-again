@@ -88,7 +88,7 @@ $(".list-group").on("blur", "textarea", function () {
 
 //value of due date has changed 
 $(".list-group").on("blur", "input[type='text']", function () {
-  //get current text
+  //get current value of the textarea
   var date = $(this)
     .val()
     .trim();
@@ -115,18 +115,6 @@ $(".list-group").on("blur", "input[type='text']", function () {
 
   //replace input with span element
   $(this).replaceWith(taskSpan);
-
-  // //create new input element
-  // var dateInput = $("<input>")
-  //   .attr("type", "text")
-  //   .addClass("form-control")
-  //   .val(date);
-
-  // //swap out elements
-  // $(this).replaceWith(dateInput);
-
-  // //automatically focus on new element
-  // dateInput.trigger("focus");
 });
 
 // modal was triggered
